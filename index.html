@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Random Page Loader</title>
+    </head>
+    <body>
+        <script>
+            // List of 10 pages
+            var pages = [
+            "activity1.html",
+            "activity2.html",
+            "activity3.html",
+            "activity4.html",
+            "activity5.html",
+            "activity6.html",
+            "activity7.html",
+            "activity8.html",
+            "activity9.html",
+            "activity10.html",
+                
+            ];
+    
+            // Function to select a random page from the list and navigate to it
+            function loadRandomPage() {
+                var randomIndex = Math.floor(Math.random() * 10);
+            var randomPage = pages[randomIndex];
+            // Append a timestamp as a query parameter to the URL
+            var timestamp = new Date().getTime();
+            var timestampQuery = "?timestamp=" + timestamp;
+            window.location.href = randomPage + timestampQuery;
+        }
+    
+            // Call the function when the page is loaded
+            loadRandomPage();
+        </script>
+    </body>
+    </html>
+    
